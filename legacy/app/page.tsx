@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <div className="p-8 font-sans">
-      <h1>레거시 페이지 (포트 3000)</h1>
+      <h1>레거시 페이지</h1>
       
       <div className="mt-8 flex flex-col gap-4">
         <div>
@@ -17,11 +17,11 @@ export default function Home() {
               <p className="mb-2 font-bold">레거시 → 뉴</p>
               <button
                 onClick={() => {
-                  window.location.href = "http://localhost:3001/";
+                  router.push("/new");
                 }}
                 className="px-4 py-2 bg-blue-600 text-white border-none rounded cursor-pointer hover:bg-blue-700"
               >
-                뉴 페이지로 이동 (포트 3001)
+                뉴 페이지로 이동
               </button>
             </div>
             <div>

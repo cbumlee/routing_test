@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [storageType, setStorageType] = useState<'cookie' | 'localStorage'>('cookie');
@@ -50,6 +51,9 @@ export default function Home() {
 
   return (
     <div className="p-8 font-sans">
+      <div className="mb-4 flex gap-4">
+        <Link href="/crud" className="text-green-600 hover:underline">CRUD 테스트 →</Link>
+      </div>
       <h1>뉴 페이지</h1>
       
       <div className="mt-8 flex flex-col gap-4">

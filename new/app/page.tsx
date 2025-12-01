@@ -54,6 +54,26 @@ export default function Home() {
       localStorage.setItem(`${STORAGE_PREFIX}storageType`, storageType);
     }
   }, [storageType]);
+
+  // 스크롤 위치 복원 및 저장
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const savedScroll = localStorage.getItem(`${STORAGE_PREFIX}scrollY`);
+    if (savedScroll) {
+      const y = Number(savedScroll);
+      if (!Number.isNaN(y)) {
+        window.scrollTo(0, y);
+      }
+    }
+
+    const handleScroll = () => {
+      localStorage.setItem(`${STORAGE_PREFIX}scrollY`, String(window.scrollY));
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   
   // 쿠키 읽기
   const getCookie = (name: string) => {
@@ -200,6 +220,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* 스크롤 테스트용 더미 영역 */}
+      <div style={{ height: "2000px" }} />
     </div>
   );
 }

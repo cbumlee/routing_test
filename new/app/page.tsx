@@ -210,7 +210,7 @@ export default function Home() {
               <p className="mb-2 font-bold">레거시에서 읽기 테스트</p>
               <button
                 onClick={() => {
-                  window.location.href = "/";
+                  window.location.href = "/legacy";
                 }}
                 className="px-4 py-2 bg-green-600 text-white border-none rounded cursor-pointer hover:bg-green-700"
               >
@@ -226,3 +226,5 @@ export default function Home() {
     </div>
   );
 }
+
+ 

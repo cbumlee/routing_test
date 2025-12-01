@@ -1,7 +1,6 @@
 'use client';
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
+import { useState } from "react";
 
 export default function Home() {
   const [storageType, setStorageType] = useState<'cookie' | 'localStorage'>('cookie');
@@ -10,70 +9,6 @@ export default function Home() {
   const [readCookieName, setReadCookieName] = useState('');
   const [readCookieValue, setReadCookieValue] = useState('없음');
   const [readStorageValue, setReadStorageValue] = useState('없음');
-
-  const STORAGE_PREFIX = 'legacy_input_';
-
-  // 페이지 로드 시 입력값 복원
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const savedCookieName = localStorage.getItem(`${STORAGE_PREFIX}cookieName`);
-      const savedCookieValue = localStorage.getItem(`${STORAGE_PREFIX}cookieValue`);
-      const savedReadCookieName = localStorage.getItem(`${STORAGE_PREFIX}readCookieName`);
-      const savedStorageType = localStorage.getItem(`${STORAGE_PREFIX}storageType`);
-      
-      if (savedCookieName) setCookieName(savedCookieName);
-      if (savedCookieValue) setCookieValue(savedCookieValue);
-      if (savedReadCookieName) setReadCookieName(savedReadCookieName);
-      if (savedStorageType === 'cookie' || savedStorageType === 'localStorage') {
-        setStorageType(savedStorageType);
-      }
-    }
-  }, []);
-
-  // 입력값 변경 시 localStorage에 저장
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem(`${STORAGE_PREFIX}cookieName`, cookieName);
-    }
-  }, [cookieName]);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem(`${STORAGE_PREFIX}cookieValue`, cookieValue);
-    }
-  }, [cookieValue]);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem(`${STORAGE_PREFIX}readCookieName`, readCookieName);
-    }
-  }, [readCookieName]);
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      localStorage.setItem(`${STORAGE_PREFIX}storageType`, storageType);
-    }
-  }, [storageType]);
-
-  // 스크롤 위치 복원 및 저장
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    const savedScroll = localStorage.getItem(`${STORAGE_PREFIX}scrollY`);
-    if (savedScroll) {
-      const y = Number(savedScroll);
-      if (!Number.isNaN(y)) {
-        window.scrollTo(0, y);
-      }
-    }
-
-    const handleScroll = () => {
-      localStorage.setItem(`${STORAGE_PREFIX}scrollY`, String(window.scrollY));
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
   
   // 쿠키 읽기
   const getCookie = (name: string) => {
@@ -115,9 +50,6 @@ export default function Home() {
 
   return (
     <div className="p-8 font-sans">
-      <div className="mb-4 flex gap-4">
-        <Link href="/crud" className="text-blue-600 hover:underline">CRUD 테스트 →</Link>
-      </div>
       <h1>레거시 페이지</h1>
       
       <div className="mt-8 flex flex-col gap-4">

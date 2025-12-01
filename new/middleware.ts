@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
 // Legacy 앱의 URL
-const LEGACY_APP_URL = process.env.LEGACY_APP_URL || 'http://localhost:3001';
+const LEGACY_APP_URL = 'http://localhost:3001';
 
 // /legacy 경로 패턴 정규식
 const LEGACY_PATH_PATTERN = /^\/legacy(\/.*)?$/;

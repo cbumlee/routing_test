@@ -3,6 +3,11 @@
 import { useState } from "react";
 
 export default function Home() {
+  const [cookieName, setCookieName] = useState('');
+  const [cookieValue, setCookieValue] = useState('');
+  const [readCookieName, setReadCookieName] = useState('');
+  const [readCookieValue, setReadCookieValue] = useState('없음');
+  
   // 쿠키 읽기
   const getCookie = (name: string) => {
     const value = `; ${document.cookie}`;
@@ -10,11 +15,6 @@ export default function Home() {
     if (parts.length === 2) return parts.pop()?.split(';').shift();
     return null;
   };
-
-  const [cookieName, setCookieName] = useState('');
-  const [cookieValue, setCookieValue] = useState('');
-  const [readCookieName, setReadCookieName] = useState('');
-  const [readCookieValue, setReadCookieValue] = useState('없음');
 
   // 쿠키 설정
   const setCookie = (name: string, value: string, days: number = 7) => {

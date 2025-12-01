@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function Home() {
@@ -10,6 +10,50 @@ export default function Home() {
   const [readCookieName, setReadCookieName] = useState('');
   const [readCookieValue, setReadCookieValue] = useState('없음');
   const [readStorageValue, setReadStorageValue] = useState('없음');
+
+  const STORAGE_PREFIX = 'legacy_input_';
+
+  // 페이지 로드 시 입력값 복원
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const savedCookieName = localStorage.getItem(`${STORAGE_PREFIX}cookieName`);
+      const savedCookieValue = localStorage.getItem(`${STORAGE_PREFIX}cookieValue`);
+      const savedReadCookieName = localStorage.getItem(`${STORAGE_PREFIX}readCookieName`);
+      const savedStorageType = localStorage.getItem(`${STORAGE_PREFIX}storageType`);
+      
+      if (savedCookieName) setCookieName(savedCookieName);
+      if (savedCookieValue) setCookieValue(savedCookieValue);
+      if (savedReadCookieName) setReadCookieName(savedReadCookieName);
+      if (savedStorageType === 'cookie' || savedStorageType === 'localStorage') {
+        setStorageType(savedStorageType);
+      }
+    }
+  }, []);
+
+  // 입력값 변경 시 localStorage에 저장
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(`${STORAGE_PREFIX}cookieName`, cookieName);
+    }
+  }, [cookieName]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(`${STORAGE_PREFIX}cookieValue`, cookieValue);
+    }
+  }, [cookieValue]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(`${STORAGE_PREFIX}readCookieName`, readCookieName);
+    }
+  }, [readCookieName]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem(`${STORAGE_PREFIX}storageType`, storageType);
+    }
+  }, [storageType]);
   
   // 쿠키 읽기
   const getCookie = (name: string) => {

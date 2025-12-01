@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Nginx에서 /new로 서빙되므로 basePath를 맞춰준다.
-  basePath: "/new",
+  // 메인 도메인으로 실행 - basePath 제거
+  // /new 경로는 Next.js가 자체 처리
 };
 
 export default nextConfig;

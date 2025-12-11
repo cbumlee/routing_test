@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/cbumlee/routing_test/compare/v1.4.0...v1.4.1) (2025-12-11)
+
+
+### Bug Fixes
+
+* fixC ([5cd4710](https://github.com/cbumlee/routing_test/commit/5cd47104f51013e1ae0b4ce7cf27d760b1befa86))
+
 ## [1.4.0](https://github.com/cbumlee/routing_test/compare/v1.3.0...v1.4.0) (2025-12-11)
 
 

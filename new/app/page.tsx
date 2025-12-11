@@ -13,7 +13,7 @@ export default function Home() {
           <ul className="list-disc list-inside space-y-2 mb-4">
             <li><code className="px-2 py-1 rounded">/</code> - 메인 라우팅 페이지 (현재 페이지)</li>
             <li><code className="px-2 py-1 rounded">/new</code> - New 앱 (Next.js 자체 처리)</li>
-            <li><code className="px-2 py-1 rounded">/legacy</code> - Legacy 앱 (middleware에서 정규식으로 프록시)</li>
+            <li><code className="px-2 py-1 rounded">/legacy</code> - Legacy 앱</li>
           </ul>
           
           <div className="mt-6 flex flex-col gap-4">

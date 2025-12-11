@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/cbumlee/routing_test/compare/v1.3.0...v1.3.1) (2025-12-11)
+
+
+### Bug Fixes
+
+* 버그 수정 ([0194149](https://github.com/cbumlee/routing_test/commit/0194149ea02f3a3979859c9b5705e580b1169a87))
+
 ## [1.3.0](https://github.com/cbumlee/routing_test/compare/v1.2.1...v1.3.0) (2025-12-11)
 
 

@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref_name == 'main' || startsWith(github.ref_name, 'release/')
     steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: googleapis/release-please-action@v3
         with:
           release-type: node

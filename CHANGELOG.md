@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/cbumlee/routing_test/compare/v1.4.1...v1.5.0) (2025-12-11)
+
+
+### Features
+
+* featD ([39cb0c2](https://github.com/cbumlee/routing_test/commit/39cb0c2c9adddd3a029e98e2b6be910d70f0fa62))
+
 ## [1.4.1](https://github.com/cbumlee/routing_test/compare/v1.4.0...v1.4.1) (2025-12-11)
 
 

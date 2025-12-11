@@ -12,7 +12,7 @@ export default function Home() {
           <h2 className="text-2xl font-bold mb-4">라우팅 구조</h2>
           <ul className="list-disc list-inside space-y-2 mb-4">
             <li><code className="px-2 py-1 rounded">/</code> - 메인 라우팅 페이지 (현재 페이지)</li>
-            <li><code className="px-2 py-1 rounded">/new</code> - New 앱 (Next.js 자체 처리)</li>
+            <li><code className="px-2 py-1 rounded">/new</code> - New 앱</li>
             <li><code className="px-2 py-1 rounded">/legacy</code> - Legacy 앱</li>
           </ul>
           

@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="p-8 font-sans">
-      <h1 className="text-3xl font-bold mb-8">Next.js 라우팅 분기 처리 PoC123</h1>
+      <h1 className="text-3xl font-bold mb-8">Next.js 라우팅 분기 처리 PoC123456</h1>
       
       <div className="mt-8 flex flex-col gap-6">
         <div className="p-6 border rounded-lg">

@@ -1,0 +1,29 @@
+name: Create Release on PR Merge
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: googleapis/release-please-action@v3
+        with:
+          command: github-release
+          release-type: node
+          token: ${{ secrets.GITHUB_TOKEN }}
+          monorepo-tags: false
+          skip-github-release: false
+          pull-request-title-pattern: 'chore: release ${version}'
+          default-branch: ${{ github.event.pull_request.base.ref }}
+

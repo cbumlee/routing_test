@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/cbumlee/routing_test/compare/v1.5.1...v1.6.0) (2025-12-11)
+
+
+### Features
+
+* 회원 탈퇴 기능 추가 ([89ba7c6](https://github.com/cbumlee/routing_test/commit/89ba7c6db43a142a6820a843a6600952bc1817e1))
+
 ## [1.5.1](https://github.com/cbumlee/routing_test/compare/v1.5.0...v1.5.1) (2025-12-11)
 
 

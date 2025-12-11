@@ -46,7 +46,7 @@ export default function Home() {
         <div className="p-6 border rounded-lg">
           <h2 className="text-xl font-bold mb-2">동작 방식</h2>
           <ul className="list-disc list-inside space-y-2 text-sm">
-            <li>단일 도메인 (localhost:3000)에서 실행</li>
+            <li>단일 도메인에서 실행</li>
             <li><code className="px-2 py-1 rounded">/legacy</code> 경로는 정규식 패턴으로 감지하여 middleware에서 Legacy 앱(:3001)으로 프록시</li>
             <li><code className="px-2 py-1 rounded">/new</code> 경로는 Next.js 자체 처리</li>
             <li>SSR 시점에서 판단 (클라이언트는 인식 불가)</li>

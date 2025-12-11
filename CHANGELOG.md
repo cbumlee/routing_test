@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.1](https://github.com/cbumlee/routing_test/compare/v1.6.0...v1.6.1) (2025-12-11)
+
+
+### Bug Fixes
+
+* fixC ([6b6667f](https://github.com/cbumlee/routing_test/commit/6b6667f1c7473c6eb5a28928639735f34175fdcb))
+
 ## [1.6.0](https://github.com/cbumlee/routing_test/compare/v1.5.1...v1.6.0) (2025-12-11)
 
 

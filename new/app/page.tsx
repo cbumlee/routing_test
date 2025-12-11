@@ -36,7 +36,7 @@ export default function Home() {
                   href="/legacy" 
                   className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
                 >
-                  Legacy 홈 (/legacy)
+                  Legacy 홈
                 </Link>
               </div>
             </div>

@@ -1,5 +1,21 @@
 # Changelog
 
+## [1.1.0](https://github.com/cbumlee/routing_test/compare/v1.0.0...v1.1.0) (2025-12-11)
+
+
+### Features
+
+* new feature1 ([f91a55e](https://github.com/cbumlee/routing_test/commit/f91a55e6e92250d12086a9a5dbd3dac83b17ad70))
+* new feature2 ([7ca1d27](https://github.com/cbumlee/routing_test/commit/7ca1d2797063a40d778fbf0c8a38ae789087061b))
+* 피쳐 추가1 ([b59b1be](https://github.com/cbumlee/routing_test/commit/b59b1be03338635c6321f4cbc9aa047c67fe5033))
+* 피쳐 추가2 ([85bc363](https://github.com/cbumlee/routing_test/commit/85bc363f71ec4200a539811c2839dfd92077e884))
+
+
+### Bug Fixes
+
+* 버그 발생 수정 ([0f8d98c](https://github.com/cbumlee/routing_test/commit/0f8d98ca2b8b72358085e18e92670469e0c84c0c))
+* 버그수정 ([4b0c00d](https://github.com/cbumlee/routing_test/commit/4b0c00d64ad150fa475ace0142bed4d0587f3750))
+
 ## 1.0.0 (2025-12-11)
 
 

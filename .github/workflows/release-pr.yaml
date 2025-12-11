@@ -14,12 +14,7 @@ jobs:
     steps:
       - uses: googleapis/release-please-action@v3
         with:
-          release-type: node
           token: ${{ secrets.GITHUB_TOKEN }}
-          packages: |
-            legacy
-            new
-          monorepo-tags: false
           skip-github-release: true
           pull-request-title-pattern: 'chore: release ${version}'
           default-branch: ${{ github.ref_name }}

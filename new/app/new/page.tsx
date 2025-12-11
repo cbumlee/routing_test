@@ -1,11 +1,12 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export default function NewHome() {
   const [storageType, setStorageType] = useState<'cookie' | 'localStorage'>('cookie');
-  const [cookieName, setCookieName] = useState('');
-  const [cookieValue, setCookieValue] = useState('');
+  const cookieNameRef = useRef<HTMLInputElement>(null);
+  const cookieValueRef = useRef<HTMLInputElement>(null);
+  const readCookieNameRef = useRef<HTMLInputElement>(null);
   const [readCookieName, setReadCookieName] = useState('');
   const [readCookieValue, setReadCookieValue] = useState('없음');
   const [readStorageValue, setReadStorageValue] = useState('없음');
@@ -40,9 +41,11 @@ export default function NewHome() {
   };
 
   const readCookie = () => {
-    if (readCookieName) {
-      const cookieValue = getCookie(readCookieName);
-      const storageValue = getLocalStorage(readCookieName);
+    const name = readCookieNameRef.current?.value;
+    if (name) {
+      setReadCookieName(name);
+      const cookieValue = getCookie(name);
+      const storageValue = getLocalStorage(name);
       setReadCookieValue(cookieValue || '없음');
       setReadStorageValue(storageValue || '없음');
     }
@@ -83,25 +86,25 @@ export default function NewHome() {
               <h3 className="mb-2 font-bold">설정</h3>
               <div className="flex gap-2 mb-4">
                 <input
+                  ref={cookieNameRef}
                   type="text"
-                  value={cookieName}
-                  onChange={(e) => setCookieName(e.target.value)}
                   placeholder="키 이름 (예: testKey, testKey1)"
                   className="px-3 py-2 border border-gray-300 rounded flex-1"
                 />
                 <input
+                  ref={cookieValueRef}
                   type="text"
-                  value={cookieValue}
-                  onChange={(e) => setCookieValue(e.target.value)}
                   placeholder="값"
                   className="px-3 py-2 border border-gray-300 rounded flex-1"
                 />
                 <button
                   onClick={() => {
+                    const cookieName = cookieNameRef.current?.value;
+                    const cookieValue = cookieValueRef.current?.value;
                     if (cookieName && cookieValue) {
                       setCookie(cookieName, cookieValue);
-                      setCookieName('');
-                      setCookieValue('');
+                      if (cookieNameRef.current) cookieNameRef.current.value = '';
+                      if (cookieValueRef.current) cookieValueRef.current.value = '';
                     }
                   }}
                   className="px-4 py-2 bg-green-600 text-white border-none rounded cursor-pointer hover:bg-green-700"
@@ -114,9 +117,8 @@ export default function NewHome() {
               <h3 className="mb-2 font-bold">읽기</h3>
               <div className="flex gap-2">
                 <input
+                  ref={readCookieNameRef}
                   type="text"
-                  value={readCookieName}
-                  onChange={(e) => setReadCookieName(e.target.value)}
                   placeholder="읽을 키 이름"
                   className="px-3 py-2 border border-gray-300 rounded flex-1"
                 />

@@ -9,7 +9,7 @@ export default function Home() {
       
       <div className="mt-8 flex flex-col gap-6">
         <div className="p-6 border rounded-lg">
-          <h2 className="text-2xl font-bold mb-4">라우팅 구조</h2>
+          <h2 className="text-2xl font-bold mb-4">라우팅 구조123</h2>
           <ul className="list-disc list-inside space-y-2 mb-4">
             <li><code className="px-2 py-1 rounded">/</code> - 메인 라우팅 페이지 (현재 페이지)</li>
             <li><code className="px-2 py-1 rounded">/new</code> - New 앱 (Next.js 자체 처리)</li>

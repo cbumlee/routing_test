@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.4.0](https://github.com/cbumlee/routing_test/compare/v1.3.0...v1.4.0) (2025-12-11)
+
+
+### Features
+
+* featA 추가 ([b56b868](https://github.com/cbumlee/routing_test/commit/b56b868484ec0ad6175b987000dce026568e7ca0))
+* featB 추가 ([e528697](https://github.com/cbumlee/routing_test/commit/e52869711cb0d265ff49baa6e76783279d174351))
+* 테스트 다시 시작하기 위한 초기화 ([b3140e4](https://github.com/cbumlee/routing_test/commit/b3140e4ec017130de5c26c49bce0d60aa4455102))
+
 ## [1.3.0](https://github.com/cbumlee/routing_test/compare/v1.2.1...v1.3.0) (2025-12-11)
 
 

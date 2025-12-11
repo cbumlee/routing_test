@@ -30,7 +30,7 @@ export default function Home() {
             </div>
             
             <div>
-              <h3 className="text-xl font-bold mb-2">Legacy 앱 (프록시)</h3>
+              <h3 className="text-xl font-bold mb-2">Legacy 앱</h3>
               <div className="flex gap-4">
                 <Link 
                   href="/legacy" 

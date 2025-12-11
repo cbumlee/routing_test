@@ -16,6 +16,9 @@ jobs:
         with:
           release-type: node
           token: ${{ secrets.GITHUB_TOKEN }}
+          packages: |
+            legacy
+            new
           monorepo-tags: false
           skip-github-release: true
           pull-request-title-pattern: 'chore: release ${version}'

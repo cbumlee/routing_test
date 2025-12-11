@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.2.0](https://github.com/cbumlee/routing_test/compare/v1.1.0...v1.2.0) (2025-12-11)
+
+
+### Features
+
+* feature1 ([62f225d](https://github.com/cbumlee/routing_test/commit/62f225d6791a29ac5b0e57ce7a5aace24e0bfdf7))
+* feature2 ([4ea754c](https://github.com/cbumlee/routing_test/commit/4ea754ceb3c794e9ccacbf4f8858c8a417c91f2b))
+
+
+### Bug Fixes
+
+* fix1 ([aedd64a](https://github.com/cbumlee/routing_test/commit/aedd64a644e07ea98fd211f806675e97d6abd415))
+
 ## [1.1.0](https://github.com/cbumlee/routing_test/compare/v1.0.0...v1.1.0) (2025-12-11)
 
 

@@ -12,10 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref_name == 'main' || startsWith(github.ref_name, 'release/')
     steps:
-      - uses: actions/checkout@v4
       - uses: googleapis/release-please-action@v3
         with:
+          release-type: node
           token: ${{ secrets.GITHUB_TOKEN }}
+          monorepo-tags: false
           skip-github-release: true
+          last-release-sha: f184aa50c1ed28c6f0c48aeadd48e9dc385f1d24
           pull-request-title-pattern: 'chore: release ${version}'
           default-branch: ${{ github.ref_name }}

@@ -69,7 +69,7 @@ export default function NewHome() {
                     checked={storageType === 'cookie'}
                     onChange={(e) => setStorageType(e.target.value as 'cookie' | 'localStorage')}
                   />
-                  <span>쿠키</span>
+                  <span>쿠키1</span>
                 </label>
                 <label className="flex items-center gap-2">
                   <input

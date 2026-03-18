@@ -60,7 +60,7 @@ export default function NewHome() {
           <h2 className="mb-4 text-xl font-bold">데이터 저장소 테스트</h2>
           <div className="flex flex-col gap-4">
             <div>
-              <h3 className="mb-2 font-bold">타입 선택2</h3>
+              <h3 className="mb-2 font-bold">타입 선택</h3>
               <div className="flex gap-4 mb-4">
                 <label className="flex items-center gap-2">
                   <input
